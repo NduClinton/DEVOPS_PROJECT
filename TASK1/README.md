@@ -54,7 +54,6 @@ sudo systemctl status apache2
 ![alt text](<IMAGE/Apache default.png>)
 
 ## STEP 2 — INSTALLING MYSQL
----
 - install the MYSQL software by running the command below, When prompted, confirm installation by typing Y, and then ENTER.
 ```bash
 sudo apt install mysql-server
@@ -97,7 +96,6 @@ mysql> exit
 ```
 
 ## STEP 3 — INSTALLING PHP
----
 
 - We have Apache installed and MySQL installed to store and manage your data.
 - PHP is the brain behind a website that processes requests and talks to databases before sending results to your browser. In addition to the php package, you'll need "PHP-MYSQL" (a PHP module that allows PHP to communicate with MySQL-based databases). You'll also need "libapache2-mod-php" (to enable Apache to handle PHP files). Core PHP packages will automatically be installed as dependencies.
@@ -109,7 +107,6 @@ sudo apt install php libapache2-mod-php php-mysql
 ![alt text](<IMAGE/Screenshot 2026-05-09 013906 10.png>)
 
 ## STEP 4 — CREATING A VIRTUAL HOST FOR YOUR WEBSITE USING APACHE
----
 
 - In this project, you will set up a domain called projectflow, but you can replace this with any domain of your choice.
 - Create the directory for projectflow using mkdir command as follows:
@@ -159,7 +156,6 @@ sudo systemctl reload apache2
 ```
 
 ## STEP 5 — ENABLE PHP ON THE WEBSITE
----
 
 - In Apache, the server is set to look for index.html before index.php. This means that if both files are in the same folder, Apache will show index.html first. You can use this to display a temporary maintenance page by creating an index.html file with a message for visitors. While this file exists, it will be shown instead of the PHP application. When maintenance is finished, you simply delete or rename the index.html file, and Apache will automatically start showing the normal index.php page again.
 - In case you want to change this behavior, you’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive. Run the command below:
