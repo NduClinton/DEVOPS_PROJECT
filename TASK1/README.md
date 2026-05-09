@@ -1,10 +1,8 @@
 ## LAMP STACK IMPLEMENTATION (Linux, Apache, MySQL and PHP)
----
 
 This document describes the steps used to create a LAMP (Linux, Apache, MySQL and PHP) stack on an AWS EC2 instance. The screenshots taken during the process are included below in the order they were used to perform the setup.
 
 ## -Preparing prerequisites 
----
 
 - I already have an AWS Acccount i use but if you don't please create one while is neccessary for this project.
 
@@ -21,10 +19,9 @@ This document describes the steps used to create a LAMP (Linux, Apache, MySQL an
 ![alt text](<IMAGE/Screenshot 2026-05-08 210437.png>)
 
 ## STEP 1 - INSTALLING APACHE
----
 
 - Update a list of packages in package manager
-> sudo apt update
+==sudo apt update==
 
 ![alt text](<IMAGE/Screenshot 2026-05-08 211212 2.png>)
 
@@ -134,12 +131,12 @@ This document describes the steps used to create a LAMP (Linux, Apache, MySQL an
 - In case you want to change this behavior, you’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive. Run the command below:
 > sudo nano /etc/apache2/mods-enabled/dir.conf
 
-==<IfModule mod_dir.c>
+> <IfModule mod_dir.c>
         #Change this:
         #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
         #To this:
         DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
-</IfModule>==
+</IfModule>
 
 - After saving and closing the file, you will need to reload Apache so the changes take effect by running this command below:
 > sudo systemctl reload apache2
