@@ -201,4 +201,3 @@ phpinfo();
 
 ![alt text](<IMAGE/step 5 image 2.png>)
 
-![alt text](<IMAGE/step 5 image 2.png>)
