@@ -22,6 +22,9 @@ This document describes the steps used to create a LAMP (Linux, Apache, MySQL an
 
 - Update a list of packages in package manager
 
+```bash
+sudo apt update
+```
 
 ![alt text](<IMAGE/Screenshot 2026-05-08 211212 2.png>)
 
@@ -47,14 +50,14 @@ sudo systemctl status apache2
 
 ![alt text](<IMAGE/add rule.png>)
 
-- As seen in the image above, the first step to take is add rule which i numbered as 1, so follow the numbers accordingly and get it done.
+- As seen in the image above, the first step to take is to add the rule which I numbered as 1, so follow the numbers accordingly and get it done.
 
 - To view the Apache default page, Go to http://Public-IP-Address:80 in your browser, you will see something like the image below
 
 ![alt text](<IMAGE/Apache default.png>)
 
 ## STEP 2 — INSTALLING MYSQL
-- install the MYSQL software by running the command below, When prompted, confirm installation by typing Y, and then ENTER.
+- Install the MySQL software by running the command below. When prompted, confirm installation by typing Y, and then ENTER.
 ```bash
 sudo apt install mysql-server
 ```
@@ -68,7 +71,7 @@ sudo mysql
 
 ![alt text](<IMAGE/mysql setup.png>)
 
-- Define the users password using this command:
+- Define the user's password using this command:
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord';
 ```
@@ -98,7 +101,7 @@ mysql> exit
 ## STEP 3 — INSTALLING PHP
 
 - We have Apache installed and MySQL installed to store and manage your data.
-- PHP is the brain behind a website that processes requests and talks to databases before sending results to your browser. In addition to the php package, you'll need "PHP-MYSQL" (a PHP module that allows PHP to communicate with MySQL-based databases). You'll also need "libapache2-mod-php" (to enable Apache to handle PHP files). Core PHP packages will automatically be installed as dependencies.
+- PHP is the brain behind a website that processes requests and talks to databases before sending results to your browser. In addition to the php package, you'll need "php-mysql" (a PHP module that allows PHP to communicate with MySQL-based databases). You'll also need "libapache2-mod-php" (to enable Apache to handle PHP files). Core PHP packages will automatically be installed as dependencies.
 - To install these 3 packages at once, run:
 ```bash
 sudo apt install php libapache2-mod-php php-mysql
@@ -121,14 +124,14 @@ sudo chown -R $USER:$USER /var/www/projectflow
 ```bash
 sudo vi /etc/apache2/sites-available/projectflow.conf
 ```
-- Paste the write up below in the blank space, but first press i in your keyboard to enter insert mode, after pasting make sure you save and exit by pressing esc and :wq the hit enter to save the file.
+- Paste the write-up below in the blank space, but first press i on your keyboard to enter insert mode, after pasting make sure you save and exit by pressing esc and :wq then hit enter to save the file.
 
 ```apache
 <VirtualHost *:80>
-  ServerName projectlamp
-  ServerAlias www.projectlamp 
+  ServerName projectflow
+  ServerAlias www.projectflow 
   ServerAdmin webmaster@localhost
-  DocumentRoot /var/www/projectlamp
+  DocumentRoot /var/www/projectflow
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
@@ -172,6 +175,10 @@ sudo nano /etc/apache2/mods-enabled/dir.conf
 </IfModule>
 ```
 
+- After pasting the text above you will see something like the image below. Make sure you save and exit.
+
+![alt text](<IMAGE/Step 5 image 1.png>)
+
 - After saving and closing the file, you will need to reload Apache so the changes take effect by running this command below:
 ```bash
 sudo systemctl reload apache2
@@ -179,7 +186,7 @@ sudo systemctl reload apache2
 - Finally, we will create a PHP script to test that PHP is correctly installed and configured on your server.
 - Create a new file named index.php inside your custom web root folder by running the command below:
 ```bash
-vim /var/www/projectlamp/index.php
+vim /var/www/projectflow/index.php
 ```
 This will open a blank file. Add the following text, which is valid PHP code, inside the file:
 
@@ -190,5 +197,6 @@ phpinfo();
 ```
 
 - When you are finished, save and close the file
-- Copy your public ip address and paste it in any of your browser then you will see your PHP just as seen in the image below:
+- Copy your public IP address and paste it in any browser then you will see the PHP info page just as seen in the image below:
 
+![alt text](<IMAGE/step 5 image 2.png>)
