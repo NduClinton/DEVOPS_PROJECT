@@ -333,3 +333,5 @@ try {
 - You can now access this page in your web browser by visiting the domain name or public IP address configured for your website, followed by /todo_list.php:
 
 http://PublicIPaddress/todo_list.php
+
+![alt text](<IMAGE/image 16 [task 2].png>)
