@@ -18,9 +18,6 @@
 
 - Create an EC2 instance in AWS with Ubuntu Server.
 
-![alt text](<IMAGE/EC2 IMAGE 1.png>)
-
-
 ## STEP 1 - BACKEND CONFIGURATION
 
 - Update Ubuntu
