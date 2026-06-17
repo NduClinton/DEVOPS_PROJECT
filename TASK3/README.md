@@ -457,6 +457,7 @@ npm run dev
 
 - Your app should open and start running on localhost:3000
 
+![alt text](<IMAGE/image 32 [task3].png>)
 
 - **Important note: In order to be able to access the application from the Internet you have to open TCP port 3000 on EC2 by adding a new Security Group rule. You already know how to do it.**
 
@@ -480,8 +481,6 @@ cd components
 ```bash
 touch Input.js ListTodo.js Todo.js
 ```
-![alt text](<IMAGE/image 33 [task3].png>)
-
 - Open Input.js file
 ```bash
 nano Input.js
@@ -540,7 +539,7 @@ export default Input
 ```bash
 npm install axios
 ```
-![alt text](<IMAGE/image 34 [task3].png>)
+![alt text](<IMAGE/image 33 [task3].png>)
 
 - Go to ‘components’ directory
 ```bash
@@ -583,7 +582,7 @@ return (
  
 export default ListTodo
 ```
-![alt text](<IMAGE/image 35 [task3].png>)
+![alt text](<IMAGE/image 34 [task3].png>)
 
 - Then in your **Todo.js** file, write the following code
 ```bash
@@ -643,7 +642,7 @@ let { todos } = this.state;
  
 export default Todo;
 ```
-![alt text](<IMAGE/image 36 [task3].png>)
+![alt text](<IMAGE/image 35 [task3].png>)
 
 - We need to make little adjustment to our react code. Delete the logo and adjust our App.js to look like this. Move to the src folder `cd ..` Make sure that you are in the src folder and run
 ```bash
@@ -666,7 +665,7 @@ return (
  
 export default App;
 ```
-![alt text](<IMAGE/image 37 [task3].png>)
+![alt text](<IMAGE/image 36 [task3].png>)
 
 - In the src directory open the App.css
 ```bash
@@ -766,7 +765,7 @@ margin-top: 0;
 }
 }
 ```
-![alt text](<IMAGE/image 38 [task3].png>)
+![alt text](<IMAGE/image 37 [task3].png>)
 
 - In the src directory open the index.css
 ```bash
@@ -792,7 +791,7 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 monospace;
 }
 ```
-![alt text](<IMAGE/image 39 [task3].png>)
+![alt text](<IMAGE/image 38 [task3].png>)
 
 - Go to the Todo directory
 ```bash
@@ -802,6 +801,8 @@ cd ../..
 ```bash
 npm run dev
 ```
-
+![alt text](<IMAGE/image 39 [task3].png>)
 
 - **Assuming no errors when saving all these files, our To-Do app should be ready and fully functional with the functionality discussed earlier: creating a task, deleting a task and viewing all your tasks.**
+
+![alt text](<IMAGE/image 40 [task3].png>)s
