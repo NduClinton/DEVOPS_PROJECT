@@ -87,7 +87,7 @@ Add this configuration into this section <VirtualHost *:80>
         ProxyPassReverse / balancer://mycluster/
 ```
 
-*Note: Remember to repalce "<WebServer1-Private-IP-Address>" with your "webserver-IP-address" in the configuration before you save the file.*
+*Note: Remember to replace <WebServer-Private-IP-Address> with your webserver IP address in the configuration before you save the file.*
 
 ![alt text](<IMAGE/TASK8 [6].png>)
 
