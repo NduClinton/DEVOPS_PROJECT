@@ -11,6 +11,4 @@ A [Jump Server](https://en.wikipedia.org/wiki/Jump_server) (sometimes also refer
 
 On the diagram below the Virtual Private Network (VPC) is divided into [two subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) – Public subnet has public IP addresses and Private subnet is only reachable by private IP addresses.
 
-TASK11/IMAGE/Diagram 1.11.png
-
-
+vscode-remote://codespaces%2Bprobable-invention-p7rjvwr6wjx5c6g6v/workspaces/DEVOPS_PROJECT/TASK11/IMAGE/Diagram%201.11.png
